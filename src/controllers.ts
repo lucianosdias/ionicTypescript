@@ -14,12 +14,16 @@ class ChatsCtrl {
     }
 }
 
+interface IStateParams extends ng.ui.IStateParamsService {
+    chatId: string;
+}
+
 class ChatDetailCtrl {
     public $inject = ['Chats', '$stateParams'];
     chat: Object;
     constructor(
         public Chats: any,
-        public $stateParams: ng.ui.IStateParamsService) {
+        public $stateParams: IStateParams) {
         this.chat = Chats.get($stateParams.chatId);
     }
 }
