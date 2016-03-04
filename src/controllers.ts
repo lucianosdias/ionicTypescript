@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 angular.module('starter.controllers', [])
 
   .controller('DashCtrl', function() {

@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {

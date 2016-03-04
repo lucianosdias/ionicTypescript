@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 angular.module('starter.services', [])
     .factory('Chats', function () {
     // Might use a resource here that returns a JSON array
