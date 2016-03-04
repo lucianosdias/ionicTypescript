@@ -1,12 +1,14 @@
 /// <reference path="../typings/main.d.ts" />
+/// <reference path="./services.ts" />
+
 class DashCtrl {
     constructor() { }
 }
 
 class ChatsCtrl {
     public $inject = ['Chats'];
-    chats: any[];
-    constructor(public Chats: any) {
+    chats: Services.IChatUser[];
+    constructor(public Chats: Services.Chats) {
         this.chats = Chats.all();
     }
     remove(chat) {
@@ -20,9 +22,9 @@ interface IStateParams extends ng.ui.IStateParamsService {
 
 class ChatDetailCtrl {
     public $inject = ['Chats', '$stateParams'];
-    chat: Object;
+    chat: Services.IChatUser;
     constructor(
-        public Chats: any,
+        public Chats: Services.Chats,
         public $stateParams: IStateParams) {
         this.chat = Chats.get($stateParams.chatId);
     }

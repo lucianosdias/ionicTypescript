@@ -1,4 +1,5 @@
 /// <reference path="../typings/main.d.ts" />
+/// <reference path="./services.ts" />
 var DashCtrl = (function () {
     function DashCtrl() {
     }
